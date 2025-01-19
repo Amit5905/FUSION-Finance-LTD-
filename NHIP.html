@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fusion Finance LTD Induction Programme</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #FF9933, #FFCC66);
+            color: #333;
+        }
+        header {
+            background-color: #FF6600;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: #FFF3E0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            color: #FF6600;
+        }
+        p {
+            line-height: 1.6;
+        }
+        .section-title {
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #FF6600;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #FF6600;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .button-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .day-button {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            background-color: #FF6600;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .day-button:hover {
+            background-color: #FF4500;
+        }
+        .training-content {
+            display: none;
+            margin-top: 20px;
+        }
+        .training-content ul {
+            list-style: square;
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+    </style>
+    <script>
+        function showContent(dayId) {
+            const contents = document.querySelectorAll('.training-content');
+            contents.forEach(content => content.style.display = 'none');
+            document.getElementById(dayId).style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+
+<header>
+    Welcome to Fusion Finance LTD Induction Programme
+</header>
+
+<section>
+    <div class="button-container">
+        <button class="day-button" onclick="showContent('day01')">NHIP Day 01</button>
+        <button class="day-button" onclick="showContent('day02')">NHIP Day 02</button>
+        <button class="day-button" onclick="showContent('day03')">NHIP Day 03</button>
+    </div>
+
+    <div id="day01" class="training-content">
+        <h2>NHIP Day 01 - Overview and Introduction</h2>
+        <p>
+            Day 01 focuses on understanding Fusion Finance LTD, its mission, and the basics of microfinance. The sessions cover:
+        </p>
+        <ul>
+            <li>**Introduction to Fusion Finance LTD**: Vision, mission, and goals.</li>
+            <li>**Overview of Microfinance Industry**: The importance of financial inclusion and how microfinance empowers low-income households.</li>
+            <li>**Core Values**: Transparency, customer-centricity, and operational excellence.</li>
+            <li>**Understanding Customer Profiles**: Identifying the needs and challenges faced by our customers.</li>
+            <li>**Joint Liability Group (JLG) Model**: Basics of JLG formation, benefits, and responsibilities of group members.</li>
+        </ul>
+        <p>
+            By the end of Day 01, trainees will understand Fusion Finance's impact and their role in the organization's mission.
+        </p>
+    </div>
+
+    <div id="day02" class="training-content">
+        <h2>NHIP Day 02 - Loan Processes and CGT</h2>
+        <p>
+            Day 02 dives into the loan processes, operational guidelines, and how to conduct **Compulsory Group Training (CGT)**. Key topics include:
+        </p>
+        <ul>
+            <li>**Loan Products**: Features, interest rates, repayment schedules, and customer eligibility.</li>
+            <li>**Operational Guidelines**: 
+                <ul>
+                    <li>Branch operational radius and approval protocols.</li>
+                    <li>Credit appraisal process based on MFI norms.</li>
+                </ul>
+            </li>
+            <li>**CGT Process**:
+                <ol>
+                    <li>Introduction and pledge: Explaining the importance of compliance with company rules.</li>
+                    <li>Training: Roles and responsibilities of JLG members, group discipline, and loan terms.</li>
+                    <li>Verification: House visits to validate customer details and financial needs.</li>
+                    <li>Feedback and preparation for the Group Recognition Test (GRT).</li>
+                </ol>
+            </li>
+        </ul>
+        <p>
+            During CGT, staff ensure customers understand the loan process and their obligations, ensuring transparency and trust.
+        </p>
+    </div>
+
+    <div id="day03" class="training-content">
+        <h2>NHIP Day 03 - Compliance and Risk Management</h2>
+        <p>
+            Day 03 focuses on compliance, risk management, and operational excellence. The sessions include:
+        </p>
+        <ul>
+            <li>**Branch Audit and Compliance**:
+                <ul>
+                    <li>Key audit parameters for branches and field staff.</li>
+                    <li>Ensuring adherence to RBI and company policies.</li>
+                </ul>
+            </li>
+            <li>**Fraud Prevention and Risk Mitigation**:
+                <ul>
+                    <li>Identifying and restricting unauthorized agent involvement.</li>
+                    <li>Guidelines for mitigating risks during center formation and loan disbursement.</li>
+                </ul>
+            </li>
+            <li>**Effective Center Meetings**:
+                <ul>
+                    <li>Importance of regular attendance and discussions.</li>
+                    <li>Resolving customer queries during meetings.</li>
+                </ul>
+            </li>
+            <li>**Performance Monitoring**:
+                <ul>
+                    <li>Key performance metrics for field staff and branch managers.</li>
+                    <li>Strategies to improve operational efficiency.</li>
+                </ul>
+            </li>
+        </ul>
+        <p>
+            By the end of Day 03, trainees will be equipped with the knowledge and tools to maintain compliance, mitigate risks, and drive operational success.
+        </p>
+    </div>
+</section>
+
+<footer>
+    © 2025 Fusion Finance LTD. All Rights Reserved.
+</footer>
+
+</body>
+</html>

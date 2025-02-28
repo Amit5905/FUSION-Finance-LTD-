@@ -3,182 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fusion Finance LTD Induction Programme</title>
+    <title>SPOT Session Countdown</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            text-align: center;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
             margin: 0;
-            padding: 0;
-            background: linear-gradient(to right, #FF9933, #FFCC66);
-            color: #333;
+            background: url('https://img.freepik.com/free-photo/teacher-explaining-lesson-classroom_23-2148453642.jpg') no-repeat center center/cover;
+            position: relative;
         }
-        header {
-            background-color: #FF6600;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-            font-size: 28px;
+
+        /* Waving Animation */
+        @keyframes wave {
+            0% { transform: rotate(0deg); }
+            25% { transform: rotate(10deg); }
+            50% { transform: rotate(0deg); }
+            75% { transform: rotate(-10deg); }
+            100% { transform: rotate(0deg); }
+        }
+
+        .waving-text {
+            font-size: 3em;
             font-weight: bold;
+            color: yellow;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+            display: inline-block;
+            animation: wave 1.5s infinite ease-in-out;
         }
-        section {
-            margin: 20px;
-            padding: 20px;
-            background-color: #FFF3E0;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+        h1, #countdown, .button {
+            position: relative;
+            z-index: 1;
         }
-        h2 {
-            color: #FF6600;
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
-        p {
-            line-height: 1.6;
-        }
-        .section-title {
-            margin-bottom: 10px;
-            padding-bottom: 5px;
-            border-bottom: 2px solid #FF6600;
-        }
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #FF6600;
-            color: #fff;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-        .button-container {
-            text-align: center;
-            margin: 20px 0;
-        }
-        .day-button {
+
+        #countdown {
+            font-size: 3em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: yellow;
+            background: rgba(0, 0, 0, 0.6);
             padding: 10px 20px;
+            border-radius: 10px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 25px;
+            font-size: 1.5em;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: 0.3s;
             margin: 10px;
-            border: none;
-            background-color: #FF6600;
-            color: #fff;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
         }
-        .day-button:hover {
-            background-color: #FF4500;
+
+        #join-button {
+            background-color: #ff6600;
         }
-        .training-content {
-            display: none;
-            margin-top: 20px;
+
+        #join-button:hover {
+            background-color: #cc5500;
         }
-        .training-content ul {
-            list-style: square;
-            margin: 10px 0;
-            padding-left: 20px;
+
+        #whatsapp-button {
+            background-color: #25D366;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        #whatsapp-button:hover {
+            background-color: #20b354;
+        }
+
+        #whatsapp-button img {
+            width: 30px;
+            height: 30px;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            font-size: 1.2em;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            color: white;
         }
     </style>
-    <script>
-        function showContent(dayId) {
-            const contents = document.querySelectorAll('.training-content');
-            contents.forEach(content => content.style.display = 'none');
-            document.getElementById(dayId).style.display = 'block';
-        }
-    </script>
 </head>
 <body>
 
-<header>
-    Welcome to Fusion Finance LTD Induction Programme
-</header>
+    <!-- Waving Bichhanda Text -->
+    <div class="waving-text">Bichhanda</div>
 
-<section>
-    <div class="button-container">
-        <button class="day-button" onclick="showContent('day01')">NHIP Day 01</button>
-        <button class="day-button" onclick="showContent('day02')">NHIP Day 02</button>
-        <button class="day-button" onclick="showContent('day03')">NHIP Day 03</button>
-    </div>
+    <h1>SPOT Session Countdown</h1>
+    <p>The session starts in:</p>
+    <div id="countdown">Loading...</div>
 
-    <div id="day01" class="training-content">
-        <h2>NHIP Day 01 - Overview and Introduction</h2>
-        <p>
-            Day 01 focuses on understanding Fusion Finance LTD, its mission, and the basics of microfinance. The sessions cover:
-        </p>
-        <ul>
-            <li>**Introduction to Fusion Finance LTD**: Vision, mission, and goals.</li>
-            <li>**Overview of Microfinance Industry**: The importance of financial inclusion and how microfinance empowers low-income households.</li>
-            <li>**Core Values**: Transparency, customer-centricity, and operational excellence.</li>
-            <li>**Understanding Customer Profiles**: Identifying the needs and challenges faced by our customers.</li>
-            <li>**Joint Liability Group (JLG) Model**: Basics of JLG formation, benefits, and responsibilities of group members.</li>
-        </ul>
-        <p>
-            By the end of Day 01, trainees will understand Fusion Finance's impact and their role in the organization's mission.
-        </p>
-    </div>
+    <!-- Join Now Button -->
+    <a class="button" id="join-button" href="https://teams.microsoft.com/l/meetup-join/19%3ameeting_Y2FiOTkyYjAtNjFjMS00OTY4LThlMDQtNDEzNDJjYTM1N2Q5%40thread.v2/0?context=%7b%22Tid%22%3a%22cb91b281-3ea4-4888-b449-f587ba2f84ae%22%2c%22Oid%22%3a%22e1907a32-fbc8-438d-b13f-f819918f897c%22%7d" target="_blank">Join Now</a>
 
-    <div id="day02" class="training-content">
-        <h2>NHIP Day 02 - Loan Processes and CGT</h2>
-        <p>
-            Day 02 dives into the loan processes, operational guidelines, and how to conduct **Compulsory Group Training (CGT)**. Key topics include:
-        </p>
-        <ul>
-            <li>**Loan Products**: Features, interest rates, repayment schedules, and customer eligibility.</li>
-            <li>**Operational Guidelines**: 
-                <ul>
-                    <li>Branch operational radius and approval protocols.</li>
-                    <li>Credit appraisal process based on MFI norms.</li>
-                </ul>
-            </li>
-            <li>**CGT Process**:
-                <ol>
-                    <li>Introduction and pledge: Explaining the importance of compliance with company rules.</li>
-                    <li>Training: Roles and responsibilities of JLG members, group discipline, and loan terms.</li>
-                    <li>Verification: House visits to validate customer details and financial needs.</li>
-                    <li>Feedback and preparation for the Group Recognition Test (GRT).</li>
-                </ol>
-            </li>
-        </ul>
-        <p>
-            During CGT, staff ensure customers understand the loan process and their obligations, ensuring transparency and trust.
-        </p>
-    </div>
+    <!-- WhatsApp Button -->
+    <a class="button" id="whatsapp-button" href="https://wa.me/917869647238" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo">
+        WhatsApp
+    </a>
 
-    <div id="day03" class="training-content">
-        <h2>NHIP Day 03 - Compliance and Risk Management</h2>
-        <p>
-            Day 03 focuses on compliance, risk management, and operational excellence. The sessions include:
-        </p>
-        <ul>
-            <li>**Branch Audit and Compliance**:
-                <ul>
-                    <li>Key audit parameters for branches and field staff.</li>
-                    <li>Ensuring adherence to RBI and company policies.</li>
-                </ul>
-            </li>
-            <li>**Fraud Prevention and Risk Mitigation**:
-                <ul>
-                    <li>Identifying and restricting unauthorized agent involvement.</li>
-                    <li>Guidelines for mitigating risks during center formation and loan disbursement.</li>
-                </ul>
-            </li>
-            <li>**Effective Center Meetings**:
-                <ul>
-                    <li>Importance of regular attendance and discussions.</li>
-                    <li>Resolving customer queries during meetings.</li>
-                </ul>
-            </li>
-            <li>**Performance Monitoring**:
-                <ul>
-                    <li>Key performance metrics for field staff and branch managers.</li>
-                    <li>Strategies to improve operational efficiency.</li>
-                </ul>
-            </li>
-        </ul>
-        <p>
-            By the end of Day 03, trainees will be equipped with the knowledge and tools to maintain compliance, mitigate risks, and drive operational success.
-        </p>
-    </div>
-</section>
+    <footer>
+        &copy; 2025 Fusion Finance LTD. All rights reserved.
+    </footer>
 
-<footer>
-    © 2025 Fusion Finance LTD. All Rights Reserved.
-</footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            console.log("Countdown script loaded.");
+
+            // Get today's date for 3:00 PM (15:00 IST)
+            const today = new Date();
+            const targetDate = new Date(today.getFullYear(), today.getMonth(), today.getDate(), 15, 0, 0).getTime();
+
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const timeLeft = targetDate - now;
+
+                if (timeLeft <= 0) {
+                    document.getElementById("countdown").textContent = "Session Started!";
+                    clearInterval(interval);
+                    return;
+                }
+
+                const hours = Math.floor((timeLeft / (1000 * 60 * 60)) % 24);
+                const minutes = Math.floor((timeLeft / (1000 * 60)) % 60);
+                const seconds = Math.floor((timeLeft / 1000) % 60);
+
+                document.getElementById("countdown").textContent =
+                    `${hours.toString().padStart(2, '0')}:
+                     ${minutes.toString().padStart(2, '0')}:
+                     ${seconds.toString().padStart(2, '0')}`;
+            }
+
+            // Run immediately & every second
+            updateCountdown();
+            const interval = setInterval(updateCountdown, 1000);
+        });
+    </script>
 
 </body>
 </html>
